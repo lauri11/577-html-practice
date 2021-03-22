@@ -5,92 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stickerz</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="icon" href="img/baby-yoda.svg">
 </head>
 
-<body>
-    <header>
+<body> 
+    <header id="home">
         <nav>
             <div class="logo">Stickerz</div>
+            <label class="burger-icon" for="burger-checkbox">☰</label>
+            <input type="checkbox" id="burger-checkbox">
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contacts">Contacts</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
+            <div class="clock"></div>
         </nav>
         <div class="banner">
             <h1>Stickerz</h1>
-            <button>Shop now</button>
+            <button class="button">Shop now</button>
         </div>
     </header>
     <main>
         <h2 id="products">Products</h2>
-        <div class="products-list">
-            <article>
-                <h3>Baby Yoda</h3>
-                <img src="img/baby-yoda.svg" alt="Baby Yoda">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum magni quae minima explicabo
-                    ipsum expedita laborum maxime fuga, adipisci perferendis impedit, atque enim nobis. Perspiciatis
-                    labore odio vel quia!</p>
-                <div class="button-container">
-                    <button>Info</button>
-                    <button>Buy</button>
-                </div>
-            </article>
-                        <article>
-                <h3>Baby Yoda</h3>
-                <img src="img/banana.svg" alt="Banana">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum magni quae minima explicabo
-                    ipsum expedita laborum maxime fuga, adipisci perferendis impedit, atque enim nobis. Perspiciatis
-                    labore odio vel quia!</p>
-                <div class="button-container">
-                    <button>Info</button>
-                    <button>Buy</button>
-                </div>
-            </article>
-                        <article>
-                <h3>Baby Yoda</h3>
-                <img src="img/girl.svg" alt="Girl">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum magni quae minima explicabo
-                    ipsum expedita laborum maxime fuga, adipisci perferendis impedit, atque enim nobis. Perspiciatis
-                    labore odio vel quia!</p>
-                <div class="button-container">
-                    <button>Info</button>
-                    <button>Buy</button>
-                </div>
-            </article>
-                        </article>
-                        <article>
-                <h3>Baby Yoda</h3>
-                <img src="img/viking.svg" alt="Viking Girl">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum magni quae minima explicabo
-                    ipsum expedita laborum maxime fuga, adipisci perferendis impedit, atque enim nobis. Perspiciatis
-                    labore odio vel quia!</p>
-                <div class="button-container">
-                    <button>Info</button>
-                    <button>Buy</button>
-                </div>
-            </article>
+        <div class="products-carousel">
+            <div class="images">
+                <img class="image1" src="" alt="Carousel image">
+                <img class="image2" src="" alt="Carousel image">
+                <img class="image3" src="" alt="Carousel image">
+            </div>
+            <button class="next">Next</button>
+            <button class="prev">Previous</button>
         </div>
+        <button class="sort-asc button card-button active">Sort by price Ascending</button>
+        <button class="sort-desc button card-button">Sort by price Descending</button>
+        <div class="product-list"></div>
     </main>
     <footer>
-        <h2>Contacts</h2>
-        <form method="POST" action="">
-            <label for="">
-                User name: <input name="user-name" type="text" placeholder="User name" id="">
+        <h2 id="contacts">Contacts</h2>
+        <form method="POST" action="YOUR_ACTION_HERE">
+            <label>
+                User name: <input name="user-name" type="text" placeholder="User name" required>
             </label>
             <br>
-            <label for="">
-                User email: <input name="user-email" type="email" placeholder="User email" id="" required>
+            <label>
+                User email: <input name="user-email" type="email" placeholder="User email" required>
             </label>
-            <label for="">
-                Your message: <textarea name="message" name="" id="" cols="30" rows="10"></textarea>
+            <br>
+            <label>
+                Your message: <textarea name="message"></textarea>
             </label>
             <br>
             <input type="submit">
             <input type="reset">
         </form>
     </footer>
+    <script src="js/index.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>
